@@ -1,13 +1,13 @@
 library(shiny)
 
 
-# Define UI for application that draws a histogram
+
 fluidPage(
 
     # Application title
     titlePanel("Data Visualization, PUBH 6899"),
 
-    # Sidebar with a slider input for number of bins
+    # Sidebar with controls over metabolites and label sizes
     sidebarLayout(
         sidebarPanel(
             uiOutput('metabolites'),
@@ -19,7 +19,7 @@ fluidPage(
                         min = 6, max = 20, step = 1, value = 12)
         ),
 
-        # Show a plot of the generated distribution
+        # Show boxplot(s)
         mainPanel(
             plotOutput('boxPlot')
         )
