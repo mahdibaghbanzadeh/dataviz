@@ -2,7 +2,7 @@ library(shiny)
 library(tidyverse)
 library(cowplot)
 
-# Define server logic required to draw a histogram
+
 function(input, output, session) {
   plot_list <- reactive({
     readRDS('top_plots.RDS')
